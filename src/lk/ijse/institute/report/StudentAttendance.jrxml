@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.0.final using JasperReports Library version 6.20.0-2bc7ab61c56f459e8176eb05c7705e145cd400ad  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="StudentAttendance" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="f5e4fa59-2f5d-462a-a3c8-4a97a1a569ce">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="InstitueDB"/>
+	<queryString language="SQL">
+		<![CDATA[Select * from Student_Attendence]]>
+	</queryString>
+	<field name="std_id" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="std_id"/>
+		<property name="com.jaspersoft.studio.field.label" value="std_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="student_attendence"/>
+	</field>
+	<field name="std_name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="std_name"/>
+		<property name="com.jaspersoft.studio.field.label" value="std_name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="student_attendence"/>
+	</field>
+	<field name="dateAttend" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.name" value="dateAttend"/>
+		<property name="com.jaspersoft.studio.field.label" value="dateAttend"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="student_attendence"/>
+	</field>
+	<field name="attendance" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="attendance"/>
+		<property name="com.jaspersoft.studio.field.label" value="attendance"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="student_attendence"/>
+	</field>
+	<group name="std_id">
+		<groupExpression><![CDATA[$F{std_id}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="111" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="8" width="555" height="30" forecolor="#8297FF" uuid="9df11520-6ede-45fd-a7be-d782cde715bc"/>
+				<textElement textAlignment="Center">
+					<font size="20" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Student Attendance Report]]></text>
+			</staticText>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="360" y="49" width="190" height="30" uuid="05bac28b-200d-44bc-9fdb-289c8a622245"/>
+				<textElement textAlignment="Right">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField pattern="HH:mm">
+				<reportElement x="10" y="49" width="140" height="30" uuid="4a482e44-9829-4b44-9cd0-df7deb87eadc">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="81" width="555" height="1" uuid="844666bf-fa68-40c9-91b8-c77159943479">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</line>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="39" splitType="Stretch">
+			<staticText>
+				<reportElement x="1" y="0" width="100" height="30" uuid="42f3a253-102d-43cb-9562-6f2590a3ce5d">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="7badeb1d-e45b-454f-8a66-33a65720f309"/>
+				</reportElement>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Student ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="152" y="0" width="100" height="30" uuid="52b587f8-c0ac-40bb-a8ef-65d60cdf4723">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="dbef8c1d-8d4e-437a-87ff-9e35896feeef"/>
+				</reportElement>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Student Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="303" y="0" width="100" height="30" uuid="9865384b-37ad-4fa0-91f6-cab480ac9f2f">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="3e786892-dbb6-475d-9b5d-d0597e4fc493"/>
+				</reportElement>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Attend Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="439" y="0" width="100" height="30" uuid="a0c2cdf1-4fe9-483c-82b2-04702ef34314">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a9a21c0d-48ee-44c6-87ab-18ab7c8aa4d8"/>
+				</reportElement>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Attendance]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="39" splitType="Stretch">
+			<textField>
+				<reportElement x="1" y="6" width="100" height="30" uuid="f4e219d1-92c4-4a4b-b332-185b4e5039e8">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="7badeb1d-e45b-454f-8a66-33a65720f309"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{std_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="152" y="6" width="100" height="30" uuid="d35c86d3-74b5-4b86-8063-68464b1680b9">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="dbef8c1d-8d4e-437a-87ff-9e35896feeef"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{std_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="303" y="6" width="100" height="30" uuid="704a4790-30e7-4870-a76b-60d63d940ec5">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="3e786892-dbb6-475d-9b5d-d0597e4fc493"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{dateAttend}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="439" y="6" width="100" height="30" uuid="3d7ae97d-1c31-496c-888e-f0187ed22889">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a9a21c0d-48ee-44c6-87ab-18ab7c8aa4d8"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{attendance}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

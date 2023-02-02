@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="1080.0" prefWidth="1500.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.institute.controller.SubjectFormController">
+   <children>
+      <Label layoutX="606.0" layoutY="29.0" text="Subject Details">
+         <font>
+            <Font name="Cambria Bold" size="48.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblDate" layoutX="1206.0" layoutY="6.0" prefHeight="30.0" prefWidth="130.0">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTime" layoutX="1348.0" layoutY="8.0" prefHeight="30.0" prefWidth="130.0">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="120.0" layoutY="160.0" text="Subject ID ">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="120.0" layoutY="260.0" text="Subject Name ">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="120.0" layoutY="360.0" text="Subject Hours ">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="120.0" layoutY="560.0" text="Teacher Name ">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtSubId" layoutX="550.0" layoutY="160.0" onKeyPressed="#subIdOnAction" prefHeight="51.0" prefWidth="600.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtSubName" layoutX="550.0" layoutY="260.0" onKeyPressed="#subNameOnAction" prefHeight="51.0" prefWidth="600.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtSubHours" layoutX="550.0" layoutY="360.0" onKeyPressed="#subHoursOnAction" prefHeight="51.0" prefWidth="600.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtTeacherId" layoutX="550.0" layoutY="460.0" onKeyPressed="#TeacherIDOnAction" prefHeight="51.0" prefWidth="600.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtTeacherName" layoutX="550.0" layoutY="560.0" prefHeight="51.0" prefWidth="600.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </JFXTextField>
+      <Label layoutX="120.0" layoutY="460.0" text="Teacher ID ">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnReset" layoutX="267.0" layoutY="771.0" onAction="#resetOnAction" prefHeight="58.0" prefWidth="280.0" style="-fx-border-color: black; -fx-border-radius: 30; -fx-background-color: #FFCA28; -fx-background-radius: 30;" text="Reset Fields" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest/resetIcon.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnAdd" layoutX="599.0" layoutY="769.0" onAction="#addOnAction" prefHeight="58.0" prefWidth="280.0" style="-fx-border-color: black; -fx-border-radius: 30; -fx-background-color: #2ecc71; -fx-background-radius: 30;" text="Add New Subject" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest/addIcon.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnSearch" layoutX="944.0" layoutY="773.0" onAction="#searchOnAction" prefHeight="58.0" prefWidth="280.0" style="-fx-border-color: black; -fx-border-radius: 30; -fx-background-color: #4FC3F7; -fx-background-radius: 30;" text="Search Subject" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest/searchIcon.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnUpdate" layoutX="418.0" layoutY="860.0" onAction="#updateOnAction" prefHeight="58.0" prefWidth="280.0" style="-fx-border-color: black; -fx-border-radius: 30; -fx-background-color: #4A8A4C; -fx-background-radius: 30;" text="Update Subject" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest/updateIcon.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnDelete" layoutX="778.0" layoutY="860.0" onAction="#deleteOnAction" prefHeight="58.0" prefWidth="280.0" style="-fx-border-color: black; -fx-border-radius: 30; -fx-background-color: #ea2020; -fx-background-radius: 30;" text="Delete Subject" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest/deleteicon.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+   </children>
+</AnchorPane>

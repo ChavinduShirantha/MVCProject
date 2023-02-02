@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="1080.0" prefWidth="1500.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.institute.controller.CourseFormController">
+   <children>
+      <Label layoutX="594.0" layoutY="20.0" text="Course Details">
+         <font>
+            <Font name="Cambria Bold" size="48.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblDate" layoutX="1206.0" layoutY="12.0" prefHeight="30.0" prefWidth="130.0">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTime" layoutX="1332.0" layoutY="13.0" prefHeight="30.0" prefWidth="130.0">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="100.0" layoutY="100.0" text="Course ID ">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtCourseId" layoutX="350.0" layoutY="100.0" prefHeight="50.0" prefWidth="200.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </JFXTextField>
+      <Label layoutX="650.0" layoutY="100.0" text="Course Name ">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="100.0" layoutY="200.0" text="Course Fee ">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="100.0" layoutY="300.0" text="Subject ID ">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="650.0" layoutY="300.0" text="Subject Name ">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtCourseName" layoutX="1000.0" layoutY="90.0" prefHeight="50.0" prefWidth="300.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtCourseFee" layoutX="350.0" layoutY="200.0" prefHeight="50.0" prefWidth="300.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </JFXTextField>
+      <JFXComboBox fx:id="cmbSubId" layoutX="350.0" layoutY="300.0" onAction="#cmbSubIdOnAction" prefHeight="50.0" prefWidth="200.0" />
+      <Label fx:id="lblSubName" layoutX="1000.0" layoutY="300.0" prefHeight="50.0" prefWidth="300.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnAddCourse" layoutX="572.0" layoutY="833.0" onAction="#addCourseOnAction" prefHeight="58.0" prefWidth="280.0" style="-fx-background-radius: 30; -fx-border-color: black; -fx-border-radius: 30; -fx-background-color: #2ecc71;" text="Add New Course" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest/addIcon.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnDelete" layoutX="772.0" layoutY="915.0" onAction="#deleteOnAction" prefHeight="58.0" prefWidth="280.0" style="-fx-background-radius: 30; -fx-border-color: black; -fx-border-radius: 30; -fx-background-color: #ea2020;" text="Delete Course" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="38.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest/deleteicon.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnUpdate" layoutX="372.0" layoutY="919.0" onAction="#updateOnAction" prefHeight="58.0" prefWidth="280.0" style="-fx-background-radius: 30; -fx-border-color: black; -fx-border-radius: 30; -fx-background-color: #4A8A4C;" text="Update Course" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest/updateIcon.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnSearch" layoutX="972.0" layoutY="832.0" onAction="#searchOnAction" prefHeight="58.0" prefWidth="280.0" style="-fx-background-radius: 30; -fx-border-color: black; -fx-border-radius: 30; -fx-background-color: #4FC3F7;" text="Search Course" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest/searchIcon.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnResetFields" layoutX="172.0" layoutY="834.0" onAction="#resetFieldsOnAction" prefHeight="58.0" prefWidth="280.0" style="-fx-background-radius: 30; -fx-border-color: black; -fx-border-radius: 30; -fx-background-color: #FFCA28;" text="Reset Fields" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest/resetIcon.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnAddSubjectCourse" buttonType="RAISED" layoutX="980.0" layoutY="386.0" onAction="#addSubjectToCourseOnAction" prefHeight="40.0" prefWidth="250.0" style="-fx-background-color: #2ecc71; -fx-background-radius: 30; -fx-border-color: black; -fx-border-radius: 30;" text="Add Subject to Course" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="17.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest/addicon2.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <TableView fx:id="tblCourse" layoutX="254.0" layoutY="470.0" prefHeight="314.0" prefWidth="962.0">
+         <columns>
+            <TableColumn fx:id="colsubId" prefWidth="190.39996337890625" text="Subject Id" />
+            <TableColumn fx:id="colsubName" prefWidth="299.1999206542969" text="Subject Name" />
+            <TableColumn fx:id="colcoursefee" prefWidth="265.60009765625" text="Course Fee" />
+            <TableColumn fx:id="colAction" prefWidth="207.2000732421875" text="Action" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,22 @@
+.button:hover
+{
+    -fx-background-color: white;
+    -fx-border-color: transparent;
+    -fx-border-width: 0px 0px 4px 4px;
+}
+
+.background
+{
+    -fx-background-color: linear-gradient(to left,cornflowerblue,lightblue);
+}
+
+.button2:hover
+{
+    -fx-background-color: cornflowerblue;
+}
+
+
+.background2
+{
+    -fx-background-color: linear-gradient(to left,cornflowerblue,mediumpurple);
+}

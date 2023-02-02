@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="1080.0" prefWidth="1500.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.institute.controller.SalaryFormController">
+   <children>
+      <Label layoutX="596.0" layoutY="21.0" text="Salary Details">
+         <font>
+            <Font name="Cambria Bold" size="48.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblDate" layoutX="1206.0" layoutY="7.0" prefHeight="30.0" prefWidth="130.0">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTime" layoutX="1332.0" layoutY="8.0" prefHeight="30.0" prefWidth="130.0">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="240.0" layoutY="130.0" text="Salary ID ">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtsalaryId" layoutX="580.0" layoutY="130.0" prefHeight="51.0" prefWidth="600.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </JFXTextField>
+      <Label layoutX="240.0" layoutY="230.0" text="Teacher ID ">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="240.0" layoutY="330.0" text="Teacher Name ">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="240.0" layoutY="430.0" text="Amount ">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="240.0" layoutY="630.0" text="Date ">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="240.0" layoutY="530.0" text="Time ">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtAmount" layoutX="580.0" layoutY="430.0" prefHeight="51.0" prefWidth="600.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtTime" layoutX="580.0" layoutY="530.0" prefHeight="51.0" prefWidth="600.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </JFXTextField>
+      <DatePicker fx:id="date1" layoutX="630.0" layoutY="630.0" prefHeight="51.0" prefWidth="500.0" promptText="dd/mm/yyyy" />
+      <Label fx:id="lblTeacherName" layoutX="580.0" layoutY="330.0" prefHeight="51.0" prefWidth="600.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnAdd" layoutX="570.0" layoutY="806.0" onAction="#addOnAction" prefHeight="58.0" prefWidth="350.0" style="-fx-background-radius: 30; -fx-border-color: black; -fx-border-radius: 30; -fx-background-color: #2ecc71;" text="Add New Salary Detail" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest/addIcon.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnDelete" layoutX="770.0" layoutY="888.0" onAction="#deleteOnAction" prefHeight="58.0" prefWidth="350.0" style="-fx-background-radius: 30; -fx-border-color: black; -fx-border-radius: 30; -fx-background-color: #ea2020;" text="Delete Salary Detail" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="38.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest/deleteicon.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnUpdate" layoutX="370.0" layoutY="892.0" onAction="#updateOnAction" prefHeight="58.0" prefWidth="350.0" style="-fx-background-radius: 30; -fx-border-color: black; -fx-border-radius: 30; -fx-background-color: #4A8A4C;" text="Update Salary Detail" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest/updateIcon.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnSearch" layoutX="970.0" layoutY="805.0" onAction="#searchOnAction" prefHeight="58.0" prefWidth="350.0" style="-fx-background-radius: 30; -fx-border-color: black; -fx-border-radius: 30; -fx-background-color: #4FC3F7;" text="Search Salary Detail" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest/searchIcon.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnResetFields" layoutX="170.0" layoutY="807.0" onAction="#resetFieldsOnAction" prefHeight="58.0" prefWidth="350.0" style="-fx-background-radius: 30; -fx-border-color: black; -fx-border-radius: 30; -fx-background-color: #FFCA28;" text="Reset Fields" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest/resetIcon.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXComboBox fx:id="cmbTeacherId" layoutX="580.0" layoutY="230.0" onAction="#cmbTeacherIdOnAction" prefHeight="51.0" prefWidth="600.0" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="1080.0" prefWidth="1500.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.institute.controller.BatchFormController">
+   <children>
+      <Label layoutX="639.0" layoutY="26.0" text="Batch Details">
+         <font>
+            <Font name="Cambria Bold" size="48.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblDate" layoutX="1206.0" layoutY="13.0" prefHeight="30.0" prefWidth="130.0">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTime" layoutX="1332.0" layoutY="14.0" prefHeight="30.0" prefWidth="130.0">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="100.0" layoutY="120.0" text="Batch ID ">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtBatchid" layoutX="300.0" layoutY="120.0" prefHeight="51.0" prefWidth="300.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </JFXTextField>
+      <Label layoutX="650.0" layoutY="120.0" text="Batch Name ">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="100.0" layoutY="220.0" text="Course ID ">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="650.0" layoutY="220.0" text="Course Name ">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtbatchname" layoutX="900.0" layoutY="120.0" prefHeight="51.0" prefWidth="500.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton fx:id="btnAdd" layoutX="600.0" layoutY="875.0" onAction="#addOnAction" prefHeight="58.0" prefWidth="280.0" style="-fx-background-radius: 30; -fx-border-color: black; -fx-border-radius: 30; -fx-background-color: #2ecc71;" text="Add New Batch" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest/addIcon.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnDelete" layoutX="800.0" layoutY="957.0" onAction="#deleteOnAction" prefHeight="58.0" prefWidth="280.0" style="-fx-background-radius: 30; -fx-border-color: black; -fx-border-radius: 30; -fx-background-color: #ea2020;" text="Delete Batch" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="38.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest/deleteicon.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnUpdate" layoutX="400.0" layoutY="961.0" onAction="#updateOnAction" prefHeight="58.0" prefWidth="280.0" style="-fx-background-radius: 30; -fx-border-color: black; -fx-border-radius: 30; -fx-background-color: #4A8A4C;" text="Update Batch" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest/updateIcon.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnSearch" layoutX="1000.0" layoutY="874.0" onAction="#searchOnAction" prefHeight="58.0" prefWidth="280.0" style="-fx-background-radius: 30; -fx-border-color: black; -fx-border-radius: 30; -fx-background-color: #4FC3F7;" text="Search Batch" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest/searchIcon.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnResetFields" layoutX="200.0" layoutY="876.0" onAction="#resetFieldsOnAction" prefHeight="58.0" prefWidth="280.0" style="-fx-background-radius: 30; -fx-border-color: black; -fx-border-radius: 30; -fx-background-color: #FFCA28;" text="Reset Fields" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest/resetIcon.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXTextField fx:id="txtCourseName" layoutX="900.0" layoutY="220.0" prefHeight="51.0" prefWidth="500.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </JFXTextField>
+      <TableView fx:id="tblStudentdetails" layoutX="134.0" layoutY="527.0" prefHeight="325.0" prefWidth="1213.0">
+        <columns>
+          <TableColumn fx:id="colstd_id" prefWidth="135.19989013671875" text="Student ID" />
+          <TableColumn fx:id="colStudentName" prefWidth="220.80001831054688" text="Student Name" />
+            <TableColumn fx:id="colCourseId" prefWidth="212.800048828125" text="Course ID" />
+            <TableColumn fx:id="colCourseName" prefWidth="202.39990234375" text="Course Name" />
+            <TableColumn fx:id="colBatchId" prefWidth="293.5999755859375" text="Batch ID" />
+            <TableColumn fx:id="colAction" prefWidth="149.60009765625" text="Action" />
+        </columns>
+      </TableView>
+      <JFXButton fx:id="btnAddTable" buttonType="RAISED" layoutX="1222.0" layoutY="432.0" onAction="#addTableOnAction" prefHeight="40.0" prefWidth="115.0" style="-fx-background-color: #2ecc71; -fx-background-radius: 30; -fx-border-color: black; -fx-border-radius: 30;" text="Add " textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="17.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest/addicon2.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Label layoutX="100.0" layoutY="320.0" text="Student ID ">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="cmbStudentId" layoutX="310.0" layoutY="320.0" onAction="#cmbStudentIdOnAction" prefHeight="51.0" prefWidth="250.0" />
+      <Label layoutX="650.0" layoutY="320.0" text="Student Name ">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblStudentName" layoutX="920.0" layoutY="320.0" prefHeight="51.0" prefWidth="500.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="cmbCourseId" layoutX="300.0" layoutY="220.0" onAction="#cmbCourseIdOnAction" prefHeight="51.0" prefWidth="250.0" />
+   </children>
+</AnchorPane>

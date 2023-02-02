@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="1080.0" prefWidth="1500.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.institute.controller.StudentAttendanceFormController">
+   <children>
+      <Label layoutX="555.0" layoutY="34.0" text="Student Attendance">
+         <font>
+            <Font name="Cambria Bold" size="48.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblDate" layoutX="1206.0" layoutY="7.0" prefHeight="30.0" prefWidth="130.0">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTime" layoutX="1348.0" layoutY="9.0" prefHeight="30.0" prefWidth="130.0">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="154.0" layoutY="154.0" text="Student ID ">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="cmbStudentId" layoutX="500.0" layoutY="154.0" onAction="#cmbStudentIdOnAction" prefHeight="51.0" prefWidth="481.0" />
+      <Label layoutX="154.0" layoutY="254.0" text="Student Name ">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblStudentName" layoutX="500.0" layoutY="254.0" prefHeight="51.0" prefWidth="500.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="154.0" layoutY="354.0" text="Date ">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="adddate" layoutX="500.0" layoutY="354.0" prefHeight="51.0" prefWidth="481.0" promptText="dd/mm/yyyy" />
+      <Label layoutX="154.0" layoutY="454.0" text="Absent Or Present ">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+      <JFXRadioButton fx:id="rbtnAbsent" layoutX="550.0" layoutY="454.0" text="Absent">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="Attendance" />
+         </toggleGroup>
+      </JFXRadioButton>
+      <JFXRadioButton fx:id="rbtnPresent" layoutX="800.0" layoutY="454.0" text="Present" toggleGroup="$Attendance">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </JFXRadioButton>
+      <JFXButton fx:id="btnReset" layoutX="200.0" layoutY="722.0" onAction="#resetOnAction" prefHeight="58.0" prefWidth="300.0" style="-fx-border-color: black; -fx-border-radius: 30; -fx-background-color: #FFCA28; -fx-background-radius: 30;" text="Reset Fields" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest/resetIcon.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnAdd" layoutX="600.0" layoutY="720.0" onAction="#addOnAction" prefHeight="58.0" prefWidth="300.0" style="-fx-border-color: black; -fx-border-radius: 30; -fx-background-color: #2ecc71; -fx-background-radius: 30;" text="Add Attendance" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest/addIcon.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnSearch" layoutX="1000.0" layoutY="724.0" onAction="#searchOnAction" prefHeight="58.0" prefWidth="300.0" style="-fx-border-color: black; -fx-border-radius: 30; -fx-background-color: #4FC3F7; -fx-background-radius: 30;" text="Search Attendance" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest/searchIcon.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnUpdate" layoutX="200.0" layoutY="808.0" onAction="#updateOnAction" prefHeight="58.0" prefWidth="300.0" style="-fx-border-color: black; -fx-border-radius: 30; -fx-background-color: #4A8A4C; -fx-background-radius: 30;" text="Update Attendance" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest/updateIcon.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnDelete" layoutX="600.0" layoutY="811.0" onAction="#deleteOnAction" prefHeight="58.0" prefWidth="300.0" style="-fx-border-color: black; -fx-border-radius: 30; -fx-background-color: #ea2020; -fx-background-radius: 30;" text="Delete Attendance" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest/deleteicon.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btngetReport" layoutX="1000.0" layoutY="809.0" onAction="#btngetReportOnAction" prefHeight="58.0" prefWidth="300.0" style="-fx-border-color: black; -fx-border-radius: 30; -fx-background-color: #A8DDF7; -fx-background-radius: 30;" text="Attendance Report" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest/reportIcon.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+   </children>
+</AnchorPane>
